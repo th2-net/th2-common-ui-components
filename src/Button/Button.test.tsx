@@ -14,5 +14,27 @@
  * limitations under the License.
  ***************************************************************************** */
 
-export * from './Switch/Switch';
-export * from './Button/Button';
+import React from 'react';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
+import { Button, ButtonProps } from './Button';
+
+describe('Button Component', () => {
+	const renderComponent = (props: ButtonProps) => render(<Button {...props} />);
+
+	it("doesn't call onClick handler when disabled", () => {
+		const changeHandlerMock = jest.fn();
+
+		const { getByRole } = renderComponent({
+			disabled: true,
+			onClick: changeHandlerMock,
+		});
+
+		const checkbox = getByRole('button');
+
+		userEvent.click(checkbox);
+
+		expect(changeHandlerMock).not.toBeCalled();
+	});
+});

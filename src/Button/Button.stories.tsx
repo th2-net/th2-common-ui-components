@@ -17,25 +17,27 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { Switcher, SwitcherProps } from './Switcher';
+import { Button, ButtonProps } from './Button';
 
 export default {
-	title: 'Library/Switcher',
-	component: Switcher,
+	title: 'Library/Button',
+	component: Button,
 	argTypes: {
 		disabled: { control: { type: 'boolean' } },
 		checked: { control: { type: 'boolean' } },
 	},
 } as Meta;
 
-const Template: Story<SwitcherProps> = props => {
-	const [isChecked, setIsChecked] = React.useState(props.checked || false);
+const Template: Story<ButtonProps> = props => {
+	const clickHandler = () => {
+		console.log('clickHandler');
+	};
 
-	React.useEffect(() => {
-		setIsChecked(isChecked);
-	}, [props.checked]);
-
-	return <Switcher {...props} checked={isChecked} onChange={setIsChecked} />;
+	return (
+		<Button {...props} onClick={clickHandler}>
+			Submit
+		</Button>
+	);
 };
 
 export const Default = Template.bind({});
@@ -43,10 +45,4 @@ export const Default = Template.bind({});
 export const Disabled = Template.bind({});
 Disabled.args = {
 	disabled: true,
-};
-
-export const WithLabels = Template.bind({});
-WithLabels.args = {
-	onLabel: 'incl',
-	offLabel: 'excl',
 };

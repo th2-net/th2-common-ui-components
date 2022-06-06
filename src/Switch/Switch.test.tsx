@@ -18,22 +18,23 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { Switcher, SwitcherProps } from './Switcher';
+import { Switch, SwitchProps } from './Switch';
 
 describe('Switcher Component', () => {
-	const renderComponent = (props: SwitcherProps) => render(<Switcher {...props} />);
+	const renderComponent = (props: SwitchProps) => render(<Switch {...props} />);
 
-	it("doesn't call change handler when disabled", () => {
+	it("doesn't call onChange handler when disabled", () => {
 		const changeHandlerMock = jest.fn();
-		const { getByTestId } = renderComponent({
+
+		const { getByRole } = renderComponent({
 			checked: false,
 			disabled: true,
 			onChange: changeHandlerMock,
 		});
 
-		const testComponent = getByTestId('switcher-checkbox');
+		const checkbox = getByRole('checkbox');
 
-		userEvent.click(testComponent);
+		userEvent.click(checkbox);
 
 		expect(changeHandlerMock).not.toBeCalled();
 	});

@@ -1,57 +1,65 @@
 {
-  "name": "th2-common-ui-components",
-  "version": "1.0.0",
-  "main": "build/index.js",
-  "module": "build/index.esm.js",
-  "files": [
-    "build"
-  ],
-  "types": "build/index.d.ts",
-  "scripts": {
-    "build": "rollup -c",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "prepublishOnly": "npm run build",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.14.5",
-    "@rollup/plugin-commonjs": "^19.0.0",
-    "@rollup/plugin-node-resolve": "^13.0.0",
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-essentials": "^6.2.9",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/react": "^6.2.9",
-    "@testing-library/jest-dom": "^5.13.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^13.1.9",
-    "@types/jest": "^26.0.23",
-    "@types/react": "^16.9.12",
-    "@types/react-dom": "^16.9.8",
-    "babel-loader": "^8.2.2",
-    "babel-preset-react-app": "^10.0.0",
-    "classnames": "^2.3.1",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.0.4",
-    "node-sass": "^5.0.0",
-    "postcss": "^8.3.1",
-    "prettier": "^2.3.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-jss": "^10.6.0",
-    "rollup": "^2.51.1",
-    "rollup-plugin-copy": "^3.4.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "sass-loader": "^10.1.1",
-    "ts-jest": "^27.0.3",
-    "typescript": "^4.1.3"
-  },
-  "dependencies": {}
+	"name": "th2-common-ui-components",
+	"version": "1.0.0",
+	"main": "build/index.js",
+	"module": "build/index.esm.js",
+	"files": [
+		"build"
+	],
+	"types": "build/index.d.ts",
+	"scripts": {
+		"build": "rollup -c",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"prepublishOnly": "npm run build",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
+	},
+	"peerDependencies": {
+		"react": ">=17.0.0",
+		"react-dom": ">=17.0.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.14.5",
+		"@rollup/plugin-commonjs": "^19.0.0",
+		"@rollup/plugin-node-resolve": "^13.0.0",
+		"@storybook/addon-actions": "^6.5.7",
+		"@storybook/addon-essentials": "^6.5.7",
+		"@storybook/addon-links": "^6.5.7",
+		"@storybook/react": "^6.5.7",
+		"@testing-library/jest-dom": "^5.16.4",
+		"@testing-library/react": "^12.1.4",
+		"@testing-library/user-event": "^14.2.0",
+		"@types/jest": "^26.0.23",
+		"@types/react": "^16.9.12",
+		"@types/react-dom": "^16.9.8",
+		"babel-loader": "^8.2.2",
+		"babel-preset-react-app": "^10.0.0",
+		"classnames": "^2.3.1",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^27.0.4",
+		"node-sass": "^5.0.0",
+		"postcss": "^8.3.1",
+		"prettier": "^2.3.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"rollup": "^2.51.1",
+		"rollup-plugin-copy": "^3.4.0",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-postcss": "^4.0.0",
+		"rollup-plugin-typescript2": "^0.30.0",
+		"sass-loader": "^10.1.1",
+		"storybook-addon-material-ui5": "^1.0.0",
+		"ts-jest": "^27.0.3",
+		"typescript": "^4.2.2"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.9.0",
+		"@emotion/styled": "^11.8.1",
+		"@mui/icons-material": "^5.8.2",
+		"@mui/material": "^5.8.2"
+	},
+	"optionalDependencies": {
+		"fsevents": "2.3.2"
+	}
 }
